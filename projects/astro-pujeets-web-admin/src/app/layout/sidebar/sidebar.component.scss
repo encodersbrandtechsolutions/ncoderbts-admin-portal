@@ -1,0 +1,19 @@
+::ng-deep {
+  .p-sidebar {
+    .p-sidebar-header {
+      padding: 0.5rem;
+    }
+    .p-sidebar-content {
+      padding: 0;
+    }
+  }
+  .p-menu {
+    width: auto;
+    padding: 0;
+    border: 0;
+    .p-menuitem-link {
+      padding: 0.7rem 0.75rem;
+      font-size: 13px;
+    }
+  }
+}

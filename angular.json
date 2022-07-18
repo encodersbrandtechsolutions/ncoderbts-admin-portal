@@ -3,5 +3,241 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "encoders-brandtech-shared-library": {
+      "projectType": "library",
+      "root": "projects/encoders-brandtech-shared-library",
+      "sourceRoot": "projects/encoders-brandtech-shared-library/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/encoders-brandtech-shared-library/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/encoders-brandtech-shared-library/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/encoders-brandtech-shared-library/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/encoders-brandtech-shared-library/src/test.ts",
+            "tsConfig": "projects/encoders-brandtech-shared-library/tsconfig.spec.json",
+            "karmaConfig": "projects/encoders-brandtech-shared-library/karma.conf.js"
+          }
+        }
+      }
+    },
+    "astro-pujeets-web-admin": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/astro-pujeets-web-admin",
+      "sourceRoot": "projects/astro-pujeets-web-admin/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/astro-pujeets-web-admin",
+            "index": "projects/astro-pujeets-web-admin/src/index.html",
+            "main": "projects/astro-pujeets-web-admin/src/main.ts",
+            "polyfills": "projects/astro-pujeets-web-admin/src/polyfills.ts",
+            "tsConfig": "projects/astro-pujeets-web-admin/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/astro-pujeets-web-admin/src/favicon.ico",
+              "projects/astro-pujeets-web-admin/src/assets"
+            ],
+            "styles": [
+              "node_modules/primeicons/primeicons.css",
+              "node_modules/primeng/resources/themes/md-light-deeppurple/theme.css",
+              "node_modules/primeng/resources/primeng.min.css",
+              "projects/astro-pujeets-web-admin/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "projects/astro-pujeets-web-admin/src/environments/environment.ts",
+                  "with": "projects/astro-pujeets-web-admin/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "astro-pujeets-web-admin:build:production"
+            },
+            "development": {
+              "browserTarget": "astro-pujeets-web-admin:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "astro-pujeets-web-admin:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/astro-pujeets-web-admin/src/test.ts",
+            "polyfills": "projects/astro-pujeets-web-admin/src/polyfills.ts",
+            "tsConfig": "projects/astro-pujeets-web-admin/tsconfig.spec.json",
+            "karmaConfig": "projects/astro-pujeets-web-admin/karma.conf.js",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/astro-pujeets-web-admin/src/favicon.ico",
+              "projects/astro-pujeets-web-admin/src/assets"
+            ],
+            "styles": [
+              "node_modules/primeicons/primeicons.css",
+              "node_modules/primeng/resources/themes/md-light-deeppurple/theme.css",
+              "node_modules/primeng/resources/primeng.min.css",
+              "projects/astro-pujeets-web-admin/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "swastika-web-admin": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/swastika-web-admin",
+      "sourceRoot": "projects/swastika-web-admin/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/swastika-web-admin",
+            "index": "projects/swastika-web-admin/src/index.html",
+            "main": "projects/swastika-web-admin/src/main.ts",
+            "polyfills": "projects/swastika-web-admin/src/polyfills.ts",
+            "tsConfig": "projects/swastika-web-admin/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/swastika-web-admin/src/favicon.ico",
+              "projects/swastika-web-admin/src/assets"
+            ],
+            "styles": ["projects/swastika-web-admin/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "projects/swastika-web-admin/src/environments/environment.ts",
+                  "with": "projects/swastika-web-admin/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "swastika-web-admin:build:production"
+            },
+            "development": {
+              "browserTarget": "swastika-web-admin:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "swastika-web-admin:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/swastika-web-admin/src/test.ts",
+            "polyfills": "projects/swastika-web-admin/src/polyfills.ts",
+            "tsConfig": "projects/swastika-web-admin/tsconfig.spec.json",
+            "karmaConfig": "projects/swastika-web-admin/karma.conf.js",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/swastika-web-admin/src/favicon.ico",
+              "projects/swastika-web-admin/src/assets"
+            ],
+            "styles": ["projects/swastika-web-admin/src/styles.scss"],
+            "scripts": []
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "analytics": "f89bf641-ff0d-41a7-b054-79474c24d07e"
   }
 }

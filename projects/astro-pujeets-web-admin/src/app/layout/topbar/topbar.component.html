@@ -1,0 +1,32 @@
+<p-menubar styleClass="bg-blue-700">
+  <ng-template pTemplate="start">
+    <div class="logo">
+      <img
+        src="/assets/images/logo.jpg"
+        height="40"
+        class="p-mr-2"
+        alt="brand logo"
+      />
+    </div>
+    <button
+      type="button"
+      (click)="triggerMenu()"
+      pButton
+      class="p-button-text"
+      icon="pi pi-bars"
+      style="margin-left: 0.25em"
+    ></button>
+  </ng-template>
+  <ng-template pTemplate="end">
+    <button
+      type="button"
+      (click)="logout()"
+      class="p-button-text"
+      pButton
+      label="Logout"
+      icon="pi pi-power-off"
+      style="margin-left: 0.25em"
+    ></button>
+  </ng-template>
+</p-menubar>
+<p-breadcrumb [model]="items"></p-breadcrumb>

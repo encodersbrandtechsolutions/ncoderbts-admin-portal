@@ -1,0 +1,16 @@
+<p-sidebar
+  [(visible)]="isSidebarOpen"
+  [transitionOptions]="'0ms'"
+  [style]="{ width: '14em' }"
+  position="left"
+  [modal]="false"
+  [showCloseIcon]="false"
+>
+  <img
+    src="/assets/images/logo.png"
+    height="80"
+    class="p-mr-2 ml-2"
+    alt="brand logo"
+  />
+  <p-menu [model]="items"></p-menu>
+</p-sidebar>

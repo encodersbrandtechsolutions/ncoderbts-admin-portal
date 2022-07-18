@@ -1,0 +1,17 @@
+{
+  "name": "encoders-module-library",
+  "private": false,
+  "version": "0.0.2",
+  "description": "Prime ng based angular library compatible for generic components and custom value accessors",
+  "author": {
+    "name": "Rahul Rajpal",
+    "email": "rahulrajpal2911@gmail.com"
+  },
+  "peerDependencies": {
+    "@angular/common": "^14.0.0",
+    "@angular/core": "^14.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  }
+}
