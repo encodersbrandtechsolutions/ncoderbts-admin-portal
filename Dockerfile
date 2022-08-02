@@ -10,4 +10,4 @@ RUN npm run build --project=astro-pujeets-web-admin
 
 EXPOSE 3004
 
-CMD ["ng", "build", "--project=astro-pujeets-web-admin"]
+CMD ["ng", "serve", "--project=astro-pujeets-web-admin"]
