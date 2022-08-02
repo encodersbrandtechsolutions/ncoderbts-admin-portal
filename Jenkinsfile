@@ -4,6 +4,11 @@ pipeline {
         nodejs 'Node 16'
     }
     stages {
+        stage('Remove Dependencies') {
+            steps {
+                sh 'rm -rf node_modules'
+            }
+        }
         stage('Dependency Installation') {
             agent any
             steps {
