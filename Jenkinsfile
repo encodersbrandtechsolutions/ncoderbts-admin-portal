@@ -7,6 +7,7 @@ pipeline {
         stage('Dependency Installation') {
             agent any
             steps {
+                sh 'npm install -g @angular/cli'
                 sh 'npm install'
             }
         }
