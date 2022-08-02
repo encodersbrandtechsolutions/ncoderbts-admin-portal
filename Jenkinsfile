@@ -10,11 +10,13 @@ pipeline {
                 sh 'npm i'
             }
         }
-        stage('Build Application') {
+        stage('Build AP-Admin') {
             steps('Astro Pujeets Admin') {
                 sh 'npm run build-astro-pujeets-web-admin'
             }
-            steps('Awastika Admin') {
+        }
+        stage('Build Swastika-Admin') {
+            steps('Swastika Admin') {
                 sh 'npm run build-swastika-web-admin'
             }
         }
