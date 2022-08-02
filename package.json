@@ -6,6 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "build-astro-pujeets-web-admin": "ng build --project=astro-pujeets-web-admin",
+    "build-swastika-web-admin": "ng build --project=swastika-web-admin",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
