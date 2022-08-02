@@ -7,7 +7,7 @@ pipeline {
         stage('Dependency Installation') {
             agent any
             steps {
-                sh 'npm i'
+                sh 'npm install'
             }
         }
         stage('Build AP-Admin') {
