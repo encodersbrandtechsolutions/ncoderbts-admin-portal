@@ -13,7 +13,7 @@ export class SignInComponent implements OnInit {
   ngOnInit(): void {}
 
   redirectToForgotPassword() {
-    this.router.navigateByUrl('/auth/forgot-password');
+   // this.router.navigateByUrl('/auth/forgot-password');
   }
 
   signIn(event: ILoginForm) {

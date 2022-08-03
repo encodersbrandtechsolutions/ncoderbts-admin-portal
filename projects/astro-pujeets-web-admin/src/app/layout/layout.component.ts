@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-layout',
@@ -8,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 export class LayoutComponent implements OnInit {
   triggerMenu = 0;
 
-  constructor() {}
+  constructor(private router: Router) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    const token = localStorage.getItem('token');
+    if (!token) {
+      this.router.navigateByUrl('/auth/sign-in');
+    }
+  }
 
   toggleMenu(trigger: number) {
     this.triggerMenu = trigger;
