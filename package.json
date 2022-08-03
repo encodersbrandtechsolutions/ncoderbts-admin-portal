@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "deploy:astro-pujeets-web-admin": "ng deploy --project=astro-pujeets-web-admin --base-href=/astro-pujeets-web-admin/ --cname=astro-pujeets-web-admin.ncodersbts.com",
+    "deploy:astro-pujeets-web-admin": "ng deploy --project=astro-pujeets-web-admin --base-href=/docs/astro-pujeets-web-admin/ --cname=dashboard.ncodersbts.com/docs/",
     "build:swastika-web-admin": "ng build --project=swastika-web-admin",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
