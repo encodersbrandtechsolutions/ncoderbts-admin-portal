@@ -11,7 +11,6 @@ pipeline {
             }
         }
         stage('Dependency Installation') {
-            agent any
             steps {
                 sh 'npm install'
             }
