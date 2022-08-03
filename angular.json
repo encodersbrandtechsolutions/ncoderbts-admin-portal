@@ -48,7 +48,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "astro-pujeets-web-admin",
+            "outputPath": "docs/astro-pujeets-web-admin",
             "index": "projects/astro-pujeets-web-admin/src/index.html",
             "main": "projects/astro-pujeets-web-admin/src/main.ts",
             "polyfills": "projects/astro-pujeets-web-admin/src/polyfills.ts",
@@ -157,7 +157,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/swastika-web-admin",
+            "outputPath": "docs/swastika-web-admin",
             "index": "projects/swastika-web-admin/src/index.html",
             "main": "projects/swastika-web-admin/src/main.ts",
             "polyfills": "projects/swastika-web-admin/src/polyfills.ts",
