@@ -7,6 +7,7 @@ pipeline {
         stage('Remove Dependencies') {
             steps {
                 sh 'rm -rf node_modules'
+                sh 'npm cache clean --verify'
             }
         }
         stage('Dependency Installation') {
