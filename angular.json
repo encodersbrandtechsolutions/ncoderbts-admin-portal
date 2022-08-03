@@ -48,7 +48,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/astro-pujeets-web-admin",
+            "outputPath": "astro-pujeets-web-admin",
             "index": "projects/astro-pujeets-web-admin/src/index.html",
             "main": "projects/astro-pujeets-web-admin/src/main.ts",
             "polyfills": "projects/astro-pujeets-web-admin/src/polyfills.ts",
@@ -71,8 +71,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "1024kb",
+                  "maximumError": "2mb"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -137,6 +137,9 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     },
@@ -233,6 +236,9 @@
             "styles": ["projects/swastika-web-admin/src/styles.scss"],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
