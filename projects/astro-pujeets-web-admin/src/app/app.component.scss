@@ -1,0 +1,17 @@
+::ng-deep {
+  p-toast {
+    .p-toast {
+      opacity: 1;
+      .p-toast-message {
+        .p-toast-message-content {
+          padding: 0.5rem;
+        }
+      }
+    }
+  }
+  p-confirmDialog {
+    .p-dialog-mask {
+      z-index: 2000;
+    }
+  }
+}

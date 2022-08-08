@@ -7,12 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'astro-pujeets-web-admin';
+  title = 'Astro Pujeets Web Admin';
 
-  constructor(router: Router) {
-    const token = localStorage.getItem('token');
-    if (!token) {
-      router.navigateByUrl('/auth/sign-in');
-    }
-  }
+  constructor() {}
 }
