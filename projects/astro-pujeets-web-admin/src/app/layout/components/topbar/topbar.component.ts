@@ -1,7 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { ConfirmationService, MenuItem, MessageService } from 'primeng/api';
-import { AuthenticationService } from '../../services/authentication.service';
+import { AuthenticationService } from '../../../services/authentication.service';
 
 @Component({
   selector: 'app-topbar',
@@ -21,7 +21,10 @@ export class TopbarComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.items = [{ label: 'Consultants' }, { label: 'New Consultant' }];
+    // this.items = [
+    //   { label: 'Consultants' },
+    //   { label: 'New Consultant' }
+    // ];
   }
 
   triggerMenu() {

@@ -7,7 +7,7 @@ import { MenuItem } from 'primeng/api';
   styleUrls: ['./sidebar.component.scss'],
 })
 export class SidebarComponent implements OnInit {
-  isSidebarOpen = true;
+  isSidebarOpen = false;
   @Input() set openSidebar(sidebarTrigger: number) {
     if (sidebarTrigger > 0) {
       this.isSidebarOpen = this.isSidebarOpen ? false : true;
@@ -22,27 +22,27 @@ export class SidebarComponent implements OnInit {
     this.items = [
       {
         label: 'Orders',
-        icon: '',
+        routerLink: '/order',
       },
       {
         label: 'Service Bookings',
-        icon: '',
+        routerLink: '/service-booking',
       },
       {
         label: 'Consultants',
-        icon: '',
+        routerLink: '/consultant',
       },
       {
         label: 'Customers',
-        icon: '',
+        routerLink: '/customer',
       },
       {
         label: 'Services',
-        icon: '',
+        routerLink: '/service-category',
       },
       {
         label: 'Products',
-        icon: '',
+        routerLink: '/product',
       },
     ];
   }

@@ -1,0 +1,17 @@
+::ng-deep {
+  p-card {
+    background-color: #fff;
+    &:hover {
+      .p-card {
+        transition: 0.75s ease;
+        background-color: rgb(244, 244, 244);
+      }
+    }
+    cursor: pointer;
+    p-image {
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}

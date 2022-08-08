@@ -1,5 +1,5 @@
 <app-topbar (toggleMenu)="toggleMenu($event)"></app-topbar>
 <app-sidebar [openSidebar]="triggerMenu"></app-sidebar>
-<div #content class="p-3">
-  <p>layout works!</p>
+<div #content class="page">
+  <router-outlet></router-outlet>
 </div>

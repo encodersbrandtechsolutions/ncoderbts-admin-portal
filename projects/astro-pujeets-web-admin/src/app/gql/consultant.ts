@@ -26,6 +26,16 @@ export const DELETE_CONSULTANT_PROFILE_PICTURE_GQL = gql`
   }
 `;
 
+export const GET_CONSULTANTS_GQL = gql`
+  query GetConsultants {
+    getConsultants {
+      _id
+      name
+      picture
+    }
+  }
+`;
+
 export const GET_BASIC_PROFILE_GQL = gql`
   query GetConsultantBasicProfile($getConsultantId: String!) {
     getProfile {

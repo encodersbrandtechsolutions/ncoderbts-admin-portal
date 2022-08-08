@@ -1,0 +1,33 @@
+<p-tabView>
+  <p-tabPanel header="General">
+    <div>
+      <label for="name" class="block text-900 font-medium mb-2">Name</label>
+      <input class="p-inputtext-sm" type="text" pInputText />
+    </div>
+    <!--
+[ngClass]="{
+            'ng-invalid':
+              (username.dirty || username.touched) &&
+              username.hasError('required'),
+            'ng-dirty':
+              (username.dirty || username.touched) &&
+              username.hasError('required')
+          }"
+          formControlName="username"
+        <small
+          *ngIf="
+            (username.dirty || username.touched) &&
+            username.hasError('required')
+          "
+          class="block text-red-700 mt-1 mb-3"
+          >Field is required</small
+        >
+        -->
+  </p-tabPanel>
+  <p-tabPanel header="Bio"> Content 2 </p-tabPanel>
+  <p-tabPanel header="Qualification"> Content 3 </p-tabPanel>
+  <p-tabPanel header="Work Experience"> Content 3 </p-tabPanel>
+  <p-tabPanel header="Awards"> Content 3 </p-tabPanel>
+  <p-tabPanel header="Profile Pictures"> Content 3 </p-tabPanel>
+  <p-tabPanel header="Service Categories"> Content 3 </p-tabPanel>
+</p-tabView>

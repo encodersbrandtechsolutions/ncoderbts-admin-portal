@@ -8,6 +8,7 @@ import {
   DELETE_CONSULTANT_AWARD_GQL,
   DELETE_CONSULTANT_PROFILE_PICTURE_GQL,
   GET_BASIC_PROFILE_GQL,
+  GET_CONSULTANTS_GQL,
   GET_PROFILE_AWARDS_GQL,
   GET_PROFILE_BIO_GQL,
   GET_PROFILE_PICTURES_GQL,
@@ -22,6 +23,7 @@ import {
   MutationConsultantAwardsRes,
   MutationUpdateConsultantRes,
   QueryGetConsultantProfileRes,
+  QueryGetConsultantsRes,
   UpdateConsultantInput,
 } from '../interfaces/consultant';
 import { AuthenticationService } from './authentication.service';
@@ -35,6 +37,12 @@ export class ConsultantService {
     private apollo: Apollo,
     private http: HttpClient
   ) {}
+
+  get getConsultants() {
+    return this.apollo.watchQuery<QueryGetConsultantsRes>({
+      query: GET_CONSULTANTS_GQL,
+    });
+  }
 
   get getBasicProfile() {
     return this.apollo.watchQuery<QueryGetConsultantProfileRes>({

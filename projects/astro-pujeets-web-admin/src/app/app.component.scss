@@ -1,4 +1,15 @@
 ::ng-deep {
+  app-layout {
+    .page {
+      background: #dddddd;
+      min-height: 100vh;
+    }
+  }
+  p-breadcrumb {
+    .p-breadcrumb {
+      background: #dddddd;
+    }
+  }
   p-toast {
     .p-toast {
       opacity: 1;
